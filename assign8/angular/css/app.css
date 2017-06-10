@@ -1,0 +1,59 @@
+/* app css stylesheet */
+
+/*
+Deanna Yee
+deannayee@my.smccd.edu
+CIS 114 OL
+File Name: app.css
+Chapter: 1
+Assignment #: 8
+Date: 5/15/17
+*/
+
+body {
+  background: #1B1E21;
+}
+
+.list-contaner {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  padding: 0;
+  margin: 0 auto;
+  max-width: 550px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 15px 15px;
+  overflow: hidden;
+}
+
+.list-contaner table {
+  margin: 0;
+}
+
+.list-contaner table .flag {
+  padding: 3px 15px;
+
+}
+
+.list-contaner table .header {
+  padding-left: 15px;
+  color: white;
+}
+.glyphicon.glyphicon-search {
+  float: right;
+  margin-top: 7px;
+  margin-right: 3%
+}
+
+.input-sm {
+  width: 84%;
+  float: left;
+}
+
+#player{
+  display: block;
+  margin: 10% auto;
+}
+
+
+
+
+

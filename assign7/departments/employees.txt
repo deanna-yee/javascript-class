@@ -1,0 +1,35 @@
+var data = { depts: [
+  { name:"Accounting",
+    employees: [
+      {firstName: "Angela", lastName: "Martin", title: "Senior Accountant"},
+      {firstName: "Kevin", lastName: "Malone", title: "Accountant"},
+      {firstName: "Oscar", lastName: "Martinez", title: "Accountant"}]
+  },
+  { name: "Customer Service",
+    employees: [
+      {firstName: "Kelly", lastName: "Kapoor", title: "Customer Service Rep."}]
+  },
+  { name: "Human Resources",
+    employees: [
+      {firstName: "Toby", lastName: "Flenderson", title: "Human Resources Manager"}]
+	},
+  { name: "Management",
+    employees: [
+      {firstName: "Ryan", lastName: "Howard", title: "Vice President, North East"},
+      {firstName: "Michael", lastName: "Scott", title: "Regional Manager"},
+      {firstName: "Dwight", lastName: "Schrute", title: "Assistant Regional Manager"},
+      {firstName: "Jim", lastName: "Halpert", title: "Assistant Regional Manager"}]
+  },
+  { name: "Sales",
+    employees: [
+      {firstName: "Andy", lastName: "Bernard", title: "Sales Director"},
+      {firstName: "Phyllis", lastName: "Lapin", title: "Sales Representative"},
+      {firstName: "Stanley", lastName: "Hudson", title: "Sales Representative"}]
+  },
+  { name: "Support",
+    employees: [
+      {firstName: "Pamela", lastName: "Beesly", title: "Receptionist"},
+      {firstName: "Creed", lastName: "Bratton", title: "Quality Assurance"},
+      {firstName: "Meredith", lastName: "Palmer", title: "Supplier Relations"}] 
+  }]
+};

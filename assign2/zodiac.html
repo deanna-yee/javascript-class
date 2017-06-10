@@ -1,0 +1,54 @@
+<!--
+Deanna Yee
+deannayee@my.smccd.edu
+CIS 114OL
+file name: zodiac.html
+assignment #: 2
+2/6/17
+-->
+<!doctype html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <title>Deanna Yee</title>
+	    <!--[if lt IE 9]>
+	    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+	    <link rel="stylesheet" href="css/zodiac.css">
+	</head>
+	<body>
+		<!-- zodiac.html -->
+		<form action="" method="post" id="zodiacForm">
+			<fieldset>
+				<legend>Chinese Zodiac Sign</legend>
+				<img src="./images/zodiac.jpg" id="image">
+				<p id="animal"></p>
+				<p id="trait"></p>
+				<p id="info">Enter month and year of birth to get your Chinese zodiac sign</p>
+				<div>
+					<label for="year">Year</label>
+					<input type="number" name="year" id="year" min="1000" max="9999" required>
+				</div>
+				<div>
+					<label for="month">Month</label>
+					<select name="month" id="month" required>
+						<option value="January">January</option>
+						<option value="February">February</option>
+						<option value="March">March</option>
+						<option value="April">April</option>
+						<option value="May">May</option>
+						<option value="June">June</option>
+						<option value="July">July</option>
+						<option value="August">August</option>
+						<option value="September">September</option>
+						<option value="October">October</option>
+						<option value="November">November</option>
+						<option value="December">December</option>
+					</select>
+				</div>
+				<input type="submit" value="Submit" id="submit">
+			</fieldset>
+		</form>
+		<script type="text/javascript" src="./js/zodiac.js"></script>
+	</body>
+</html>

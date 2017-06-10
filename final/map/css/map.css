@@ -1,0 +1,25 @@
+/*
+Deanna Yee
+deannayee@my.smccd.edu
+CIS 114 OL
+File Name: map.css
+Final exam
+Date: 5/22/17
+*/
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+}
+
+#map {
+	margin: auto;
+	width: 600px;
+	height: 600px
+}
+
+h1, h2, #instructions{
+	text-align: center;
+}
+
+

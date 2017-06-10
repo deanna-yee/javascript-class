@@ -1,0 +1,70 @@
+/*
+Deanna Yee
+deannayee@my.smccd.edu
+CIS 114 OL
+File Name: itunes.css
+Final exam
+Date: 5/20/17
+*/
+
+#searchbody{
+	display: block;
+	margin: auto;
+	border: 2px solid blue;
+	width: 850px;
+}
+
+#itunesImage{
+	float: left;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+#searchdiv{
+	margin: 20px;
+	margin-bottom: 40px;
+}
+
+#searchdiv span{
+	vertical-align: middle;
+	font-weight: bold;
+	font-size: 21px;
+}
+
+input:first-child{
+	display: block;
+}
+
+label{
+	display: block;
+}
+
+#output{
+	margin: auto;
+}
+
+.infoTitle{
+	display: inline-block;
+	padding-left: 10px;
+
+}
+
+.info{
+	display: inline-block;
+	margin-left: 40px;
+	margin-right: 25px;
+}
+
+.song{
+	border: 1px solid black;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	
+}
+
+.albumImg{
+	float: right;
+	margin-right: 20px;
+	margin-top: 20px;
+}

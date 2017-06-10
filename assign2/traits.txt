@@ -1,0 +1,19 @@
+// order: Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat, Monkey, 
+// Rooster, Dog, Pig
+// array indexes are 0-11
+// copy and paste the array into the zodiac.js file
+
+var traits = [
+   'Intelligent, adaptable, quick-witted, charming, artistic, sociable',
+   'Loyal, reliable, thorough, strong, reasonable, steady, determined',
+   'Enthusiastic, courageous, ambitious, leadership, confidence, charismatic',
+   'Trustworthy, empathic, modest, diplomatic, sincere, sociable, caretakers',
+   'Lucky, flexible, eccentric, imaginative, artistic, spiritual, charismatic',
+   'Philosophical, organized, intelligent, intuitive, elegant, attentive, decisive',
+   'Adaptable, loyal, courageous, ambitious, intelligent, adventurous, strong ',
+   'Tasteful, crafty, warm, elegant, charming, intuitive, sensitive, calm',
+   'Quick-witted, charming, lucky, adaptable, bright, versatile, lively, smart',
+   'Honest, energetic, intelligent, flamboyant, flexible, diverse, confident',
+   'Loyal, sociable, courageous, diligent, steady, lively, adaptable, smart',
+   'Honorable, philanthropic, determined, optimistic, sincere, sociable'
+];

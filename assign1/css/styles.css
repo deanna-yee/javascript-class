@@ -1,0 +1,82 @@
+/*
+Deanna Yee
+deannayee@my.smccd.edu
+CIS 114 OL
+File Name: styles.css
+Book/ Chapter: Modern JavaScript/Chapter 4
+Assignment #: 1
+Date: 1/21/17 
+*/
+html {
+	padding:1em;
+	background:#B9C2CC;
+}
+form {
+	background:#ffffff;
+	padding:1em;
+	border:1px solid #eeeeee;
+}
+
+fieldset div {
+	margin:0.3em 0;
+	clear:both;
+}
+
+form {
+	margin:1em;
+	width:18em;
+}
+
+label {
+	float:none;
+	width:15em;
+	display:block;
+	clear:both;
+}
+
+legend {
+	color:#0b77b7;
+	font-size:1.4em;
+}
+
+legend span {
+	width:10em;
+	text-align:right;
+}
+
+input {
+	padding:0.15em;
+	width:12em;
+	border:1px solid #dddddd;
+	background:#fafafa;
+	font: 1em arial, sans-serif;
+	display:block;
+	float:left;
+}
+
+input:hover, input:focus {
+	border-color:#c5c5c5;
+	background:#f6f6f6;
+} 
+
+fieldset {
+	border:1px solid #dddddd;
+	padding:0 0.5em 0.5em;
+}
+
+input.default {
+	color:#bbbbbb;
+}
+
+#submit {
+	margin:1em;
+	width:75px;
+	height:26px;
+	border:0;
+	display:block;
+}
+
+#submit:hover {
+	background-position:0 -26px;
+}
+

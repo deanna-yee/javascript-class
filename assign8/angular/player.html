@@ -1,0 +1,33 @@
+<!--
+Deanna Yee
+deannayee@my.smccd.edu
+CIS 114 OL
+File Name: player.html
+Chapter: 1
+Assignment #: 8
+Date: 5/15/17
+-->
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <title>Deanna Yee</title>
+	  <link rel="stylesheet" href="css/bootstrap.css">
+	  <link rel="stylesheet" href="css/app.css"/>
+	</head>
+	<body>
+		<img id="player">
+		<script type="text/javascript">
+			//get query string
+			var queryString = window.location.search.substring(1);
+			var searches = queryString.split("&");
+			//get rank
+			var pair = searches[0].split("=");
+			//get rank's value
+			var rankPair = pair[1];
+			//display image
+			var image = document.getElementById("player");
+			image.src = "img/" + rankPair + "big.jpg";
+		</script>
+	</body>
+</html>

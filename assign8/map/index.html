@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+Deanna Yee
+deannayee@my.smccd.edu
+CIS 114 OL
+File Name: index.html
+Chapter: 13
+Assignment #: 8
+Date: 5/14/17 
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deanna Yee</title>
+    <link rel="stylesheet" href="css/main.css">	
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script>
+		$(document).ready(function(){
+			var geocoder = new google.maps.Geocoder();
+			
+			//geocoding my home town
+			geocoder.geocode({address: "Daly City, CA"}, function(results){
+				var directionsService = new google.maps.DirectionsService();
+				var markers = [];
+				//store the location
+				var myLatLng = new google.maps.LatLng(results[0].geometry.location.lat(),
+					results[0].geometry.location.lng());
+				
+				//center around home town and set zoom
+				var mapOptions = {
+				zoom: 10, 
+				center: myLatLng, 
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+				//display map
+				var map = new google.maps.Map($("#map").get(0), mapOptions);
+
+				//display marker at home town
+				var marker = new google.maps.Marker({
+					position: myLatLng,
+					map: map
+				});
+				markers[markers.length] = marker;
+
+				//custom message to marker
+				var overlay = new google.maps.OverlayView();
+				overlay.draw = function(){
+					var point = overlay.getProjection().fromLatLngToContainerPixel(
+						marker.getPosition());
+					$("#message").html("<h3>This is my home town!</h3>")
+					$("#message").show().css({
+						top: point.y + 10,
+						left: point.x
+					});
+				};
+				overlay.setMap(map);
+
+				//listener to add a marker when map is clicked
+				var listener = google.maps.event.addListener(map, "click", function(event){
+					var clickedMarker = new google.maps.Marker({
+						position: event.latLng,
+						map: map
+					});
+					markers[markers.length] = clickedMarker;
+					if(markers.length > 1){
+						//remove listener
+						google.maps.event.removeListener(listener);
+						//directions from hometown to place clicked
+						var directionsRenderer = new google.maps.DirectionsRenderer();
+						directionsRenderer.setMap(map);
+						directionsRenderer.setPanel($("#directions").get(0));
+						var request = {
+							origin: markers[0].getPosition(),
+							destination: markers[1].getPosition(),
+							travelMode: google.maps.TravelMode.DRIVING
+						};
+						directionsService.route(request, function(result, status){
+							if (status == google.maps.DirectionsStatus.OK) {
+								directionsRenderer.setDirections(result);
+							}
+						});
+					}
+				});
+			});
+		});
+    </script>
+</head>
+<body>
+   	<div id="map"></div>
+   	<div id="directions"></div>
+   	<div id="message" style="display:none;"></div>
+</body>
+</html>

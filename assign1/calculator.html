@@ -1,0 +1,32 @@
+<!--
+Deanna Yee
+deannayee@my.smccd.edu
+CIS 114 OL
+File Name: calculator.html
+Book/ Chapter: Modern JavaScript/Chapter 4
+Assignment #: 1
+Date: 1/24/17 
+-->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Deanna Yee</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <!-- calculator.html -->
+        <form action="" method="post" id="theForm">
+            <fieldset>
+                <p>Use this form to calculate the future value of your investment</p>
+    			<div><label for="principal">Initial Investment (Principal)</label><input type="text" 
+                name="principal" id="principal" value="0.00" required></div>
+    			<div><label for="rate">Interest Rate (%)</label><input type="text" name="rate" id="rate" value="0.0" required></div>
+    			<div><label for="years">Years</label><input type="number" name="years" id="years" value="0" min="0" required></div>
+    			<div><label for="future">Future Value</label><input type="text" name="future" id="future" value="$0.00"></div>
+    			<div><input type="submit" value="Calculate" id="submit"></div>
+            </fieldset>
+        </form>
+        <script src="js/calculator.js"></script>
+    </body>
+</html>

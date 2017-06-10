@@ -1,0 +1,43 @@
+/*
+Deanna Yee
+deannayee@my.smccd.edu
+CIS 114 OL
+File Name: planets.css
+Assignment #: midterm 2
+Date: 4/14/17 
+*/
+
+body{
+	font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color: #1b1d26;
+	background-color: #f1f2d8;
+}
+p, form, button{border:0; margin:0; padding:0;}
+.spacer{clear:both; height:1px;}
+/* ----------- My Form ----------- */
+form{
+	margin:0 auto;
+	width: 430px;
+	padding:14px;
+	background-color: #ffffff;
+	border:solid 2px #425955;
+}
+
+/* ----------- stylized ----------- */
+ p{
+	font-size:13px;
+	color:#666666;
+	margin-bottom:20px;
+	padding-bottom:10px;
+}
+
+select{
+	float:left;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 1px #BFBD9F;
+	width:200px;
+	margin:10px 0 20px 10px;
+}
+

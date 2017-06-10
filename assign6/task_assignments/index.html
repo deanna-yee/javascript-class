@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+Deanna Yee
+deannayee@my.smccd.edu
+CIS 114 OL
+File Name: index.html
+Book/ Chapter: JQUERY/Chapter 11
+Assignment #: 6
+Date: 4/25/17 
+-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Deanna Yee</title>
+    <link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.min.css">
+	<link rel="stylesheet" href="main.css">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        	//resuable function to make tasks draggable
+        	function makeDraggable(){
+        		$(".ui-state-default").draggable({
+        			cursor: "move",
+        			grid: [25, 34]
+        		});
+        	}
+
+        	//make tasks draggable
+        	makeDraggable();
+
+        	/*makes employee1 and employee2 droppable and adds task to end of the
+        	other tasks for the employee*/ 
+        	$("#employee1, #employee2").droppable({
+        		drop: function(event, ui){
+        			$(this).append($(ui.draggable));
+        			$(ui.draggable).css('left', 0);
+        			$(ui.draggable).css('top', 0);
+        		}
+        	});
+
+        	//add a task to employee1
+        	$("#add1").click(function(){
+        		var description = prompt("Please enter a description for the task.");
+        		if((description != null) && (description != "")) {
+        			$("<div class='ui-state-default'></div>").html($("<p></p>").html(description)).appendTo($('#employee1'));
+        			makeDraggable();
+        		}
+        	});
+
+        	//add a task to employee2
+        	$("#add2").click(function(){
+        		var description = prompt("Please enter a description for the task.");
+        		if((description != null) && (description != "")) {
+        			$("<div class='ui-state-default'></div>").html($("<p></p>").html(description)).appendTo($('#employee2'));
+        			makeDraggable();
+        		}
+        	});
+        });
+    </script>
+</head>
+	
+<body>
+	<main>
+		<h2>Task List by Employee</h2>
+		<div id="left">
+		    <h3>Kelly</h3>
+		    <div id="employee1">
+		      	<div class="ui-state-default"><p>Manage office personnel</p></div>
+		        <div class="ui-state-default"><p>Process payables</p></div>          		      	
+		        <div class="ui-state-default"><p>Process payroll</p></div>  		      	
+		    </div>
+		    <input type="button" id="add1" value="Add Task">
+       </div>
+       <div id="right">
+	        <h3>Juliette</h3>
+	        <div id="employee2" class="connectedSortable">
+	            <div class="ui-state-default"><p>Enter orders</p></div>     	        	
+	            <div class="ui-state-default"><p>Process invoices</p></div>     
+	        </div>
+		    <input type="button" id="add2" value="Add Task">
+        </div>       
+	</main>
+</body>
+</html>

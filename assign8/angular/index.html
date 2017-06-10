@@ -1,0 +1,55 @@
+<!--
+Deanna Yee
+deannayee@my.smccd.edu
+CIS 114 OL
+File Name: index.html
+Chapter: 1
+Assignment #: 8
+Date: 5/15/17
+-->
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Deanna Yee</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+
+<body ng-app="listApp" ng-controller="listController">
+
+  <div class="list-contaner">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th class="header" colspan="3">FIFA Top 20 Women Players</th>
+          <th>
+            <input type="text" ng-model="searchFilter" placeholder="Search..." class="form-control input-sm" />
+            <span class="glyphicon glyphicon-search"></span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th></th>
+          <th>Country</th>
+          <th>Player</th>
+          <th>Rating</th>
+        </tr>
+        <tr ng-repeat="player in playerList | filter: searchFilter">
+          <td>{{player.rank}}.</td>
+          <td class="flag"><img ng-src="img/{{player.flag}}.png"></td>
+          <td><img ng-src="img/{{player.rank}}.jpg">
+          <a href="player.html?rank={{player.rank}}">{{player.name}}</a></td>
+          <td>{{player.rating}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <script src="js/angular.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+
+</body>
+</html>

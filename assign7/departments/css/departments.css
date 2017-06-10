@@ -1,0 +1,31 @@
+/*
+Deanna Yee
+deannayee@my.smccd.edu
+CIS 114 OL
+File Name: departments.css
+Chapter: 13
+Assignment #: 7
+Date: 5/9/17 
+*/
+
+h1{
+	margin-left: 2%;
+}
+
+ul{
+	list-style-type: none;
+	margin-left: 2%;	
+}
+
+li{
+	margin-bottom: 3%;
+}
+
+img{
+	vertical-align: middle;
+}
+
+span{
+	vertical-align: middle;
+	margin-left: 3%;
+}
